@@ -1,0 +1,7 @@
+minetest.register_on_newplayer(function(player)
+	print("giving initial stuff to player")
+	player:get_inventory():add_item('main', 'default:pick_wood')
+        player:get_inventory():add_item('main', 'default:pick_stone')
+	player:get_inventory():add_item('main', 'default:torch 10')
+	player:get_inventory():add_item('main', 'default:wood 10')
+end)
