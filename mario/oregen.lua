@@ -2,7 +2,7 @@ minetest.register_ore({
 	ore_type       = "scatter",
 	ore            = "mario:block",
 	wherein        = "default:stone",
-	clust_scarcity = 16*16*16,
+	clust_scarcity = 4*4*4,
 	clust_num_ores = 12,
 	clust_size     = 3,
 	height_min     = -31000,
