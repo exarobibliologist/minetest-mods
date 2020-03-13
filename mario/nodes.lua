@@ -2,10 +2,10 @@ minetest.register_node("mario:block", {
 	description = "Block",
 	tiles = {"block1.png"},
 	is_ground_content = true,
-	light_source = 1,
+	light_source = 6,
 	groups = {oddly_breakable_by_hand=1, cracky=3, stone=1},
 	drop = {
-		max_items = 2,
+		max_items = 3,
 		items = {
 			{ items = {'mario:cloud'}, rarity = 2 },
 			{ items = {'mario:pwing'}, rarity = 2 },
@@ -30,10 +30,10 @@ minetest.register_node("mario:exclamationblock", {
 	description = "Exclamation Block",
 	tiles = {"exclamationblock.png"},
 	is_ground_content = true,
-	light_source = 2,
+	light_source = 12,
 	groups = {oddly_breakable_by_hand=1, cracky=3, stone=1},
 	drop = {
-		max_items = 4,
+		max_items = 6,
 		items = {
 			{ items = {'mario:cloud'}, rarity = 2 },
 			{ items = {'mario:pwing'}, rarity = 2 },
@@ -58,10 +58,10 @@ minetest.register_node("mario:question1", {
 	description = "Question Block",
 	tiles = {"questionblock1.png"},
 	is_ground_content = true,
-	light_source = 3,
+	light_source = 18,
 	groups = {oddly_breakable_by_hand=1, cracky=3, stone=1},
 	drop = {
-		max_items = 8,
+		max_items = 12,
 		items = {
 			{ items = {'mario:cloud'}, rarity = 2 },
 			{ items = {'mario:pwing'}, rarity = 2 },
@@ -86,10 +86,10 @@ minetest.register_node("mario:question2", {
 	description = "Question Block",
 	tiles = {"questionblock2.png"},
 	is_ground_content = true,
-	light_source = 4,
+	light_source = 24,
 	groups = {oddly_breakable_by_hand=1, cracky=3, stone=1},
 	drop = {
-		max_items = 16,
+		max_items = 24,
 		items = {
 			{ items = {'mario:cloud'}, rarity = 2 },
 			{ items = {'mario:pwing'}, rarity = 2 },
