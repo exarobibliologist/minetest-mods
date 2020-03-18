@@ -58,7 +58,7 @@ minetest.register_node("mario:question1", {
 	description = "Question Block",
 	tiles = {"questionblock1.png"},
 	is_ground_content = true,
-	light_source = 18,
+	light_source = 24,
 	groups = {oddly_breakable_by_hand=1, cracky=3, stone=1},
 	drop = {
 		max_items = 12,
@@ -86,7 +86,7 @@ minetest.register_node("mario:question2", {
 	description = "Question Block",
 	tiles = {"questionblock2.png"},
 	is_ground_content = true,
-	light_source = 24,
+	light_source = 48,
 	groups = {oddly_breakable_by_hand=1, cracky=3, stone=1},
 	drop = {
 		max_items = 24,
