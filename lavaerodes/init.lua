@@ -1,4 +1,4 @@
--- Stone Erodes to Cobble to Dirt to Air
+-- Stone Erodes to Cobble to Dirt to Lava
 default.change_to_cobble = function(pos)
 	minetest.set_node(pos, {name="default:cobble"})
 end
@@ -7,8 +7,8 @@ default.change_to_dirt = function(pos)
 	minetest.set_node(pos, {name="default:dirt"})
 end
 
-default.change_to_flowing = function(pos)
-	minetest.set_node(pos, {name="default:lava_flowing"})
+default.change_to_lava = function(pos)
+	minetest.set_node(pos, {name="default:lava_source"})
 end
 
 minetest.register_abm({
@@ -37,7 +37,7 @@ minetest.register_abm({
 	interval = 10,
 	chance = 1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		default.change_to_flowing(pos, node, active_object_count, active_object_count_wider)
+		default.change_to_lava(pos, node, active_object_count, active_object_count_wider)
 	end,
 })
 
@@ -63,7 +63,7 @@ minetest.register_abm({
 	interval = 10,
 	chance = 8,
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		default.change_to_flowing(pos, node, active_object_count, active_object_count_wider)
+		default.change_to_lava(pos, node, active_object_count, active_object_count_wider)
 	end,
 })
 
