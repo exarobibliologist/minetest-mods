@@ -11,6 +11,10 @@ default.change_to_lava = function(pos)
 	minetest.set_node(pos, {name="default:lava_source"})
 end
 
+default.change_to_flowing = function(pos)
+	minetest.set_node(pos, {name="default:lava_flowing"})
+end
+
 minetest.register_abm({
 	nodenames = {"group:stone"},
 	neighbors = {"group:lava"},
@@ -37,7 +41,7 @@ minetest.register_abm({
 	interval = 10,
 	chance = 1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		default.change_to_lava(pos, node, active_object_count, active_object_count_wider)
+		default.change_to_flowing(pos, node, active_object_count, active_object_count_wider)
 	end,
 })
 
@@ -63,7 +67,7 @@ minetest.register_abm({
 	interval = 10,
 	chance = 8,
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		default.change_to_lava(pos, node, active_object_count, active_object_count_wider)
+		default.change_to_flowing(pos, node, active_object_count, active_object_count_wider)
 	end,
 })
 
