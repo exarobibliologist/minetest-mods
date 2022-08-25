@@ -15,6 +15,20 @@ default.change_to_flowing = function(pos)
 	minetest.set_node(pos, {name="default:lava_flowing"})
 end
 
+-- Gravel Erodes to Lava
+
+minetest.register_abm({
+        nodenames = {"default:gravel"},
+        neighbors = {"group:lava"},
+        interval = 1,
+        chance = 2,
+        action = function(pos, node, active_object_count, active_object_count_wider)
+                default.change_to_lava(pos, node, active_object_count, active_object_count_wider)
+        end,
+})
+
+-- Stone erodes to Cobble erodes to Dirt erodes to Flowing Lava
+
 minetest.register_abm({
 	nodenames = {"group:stone"},
 	neighbors = {"group:lava"},
@@ -45,7 +59,7 @@ minetest.register_abm({
 	end,
 })
 
--- Sand Erodes to Glass to Air
+-- Sand erodes to Glass erodes to Air
 
 default.change_to_glass = function(pos)
 	minetest.set_node(pos, {name="default:glass"})
@@ -54,8 +68,8 @@ end
 minetest.register_abm({
 	nodenames = {"group:sand"},
 	neighbors = {"group:lava"},
-	interval = 10,
-	chance = 4,
+	interval = 1,
+	chance = 1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		default.change_to_glass(pos, node, active_object_count, active_object_count_wider)
 	end,
@@ -64,10 +78,10 @@ minetest.register_abm({
 minetest.register_abm({
 	nodenames = {"default:glass"},
 	neighbors = {"group:lava"},
-	interval = 10,
+	interval = 2,
 	chance = 8,
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		default.change_to_flowing(pos, node, active_object_count, active_object_count_wider)
+		default.change_to_lava(pos, node, active_object_count, active_object_count_wider)
 	end,
 })
 
