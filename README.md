@@ -32,8 +32,8 @@ watercrafts = Adds waterrock, a block that changes surrounding blocks to water_s
 
 <h1><blockquote>Other Mods</blockquote></h1>
 
+angledstairs, anvil, caverealms, torch_bomb, unified_inventory = These are either backed up and/or forked so I can study them or tweak them. Watch this space for development?
+
 bettertnt = Old TNT mod that I tried tweaking. My suggestion is to just use the Nuke mod on minetest. It's updated and much better than this one.
 
 caverealms = Backed up version of Cave Realms Lite.
-
-str_helpers = Needed for several of the scripts above.
