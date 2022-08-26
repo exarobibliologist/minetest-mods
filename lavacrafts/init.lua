@@ -22,8 +22,8 @@ minetest.register_craft({
 minetest.register_ore({
 	ore_type       = "scatter",
 	ore            = "lavacrafts:lavarock",
-	wherein        = "default:stone",
-	clust_scarcity = 20*20*20,
+	wherein        = "group:stone",
+	clust_scarcity = 75*75*75,
 	clust_num_ores = 1,
 	clust_size     = 5,
 	height_min     = 1,
@@ -35,55 +35,11 @@ default.change_to_lavanode = function(pos)
 end
 
 minetest.register_abm({
-	nodenames = {"group:cracky"},
+	nodenames = {"group:stone", "group:sand", "group:wood"},
         neighbors = {"lavacrafts:lavarock"},
-        interval = 2,
-        chance = 1,
-        action = function(pos, node, active_object_count, active_object_count_wider)
-                default.change_to_lavanode(pos, node, active_object_count, active_object_count_wider)
-        end,
-})
-
-minetest.register_abm({
-	nodenames = {"group:choppy"},
-        neighbors = {"lavacrafts:lavarock"},
-        interval = 2,
-        chance = 1,
-        action = function(pos, node, active_object_count, active_object_count_wider)
-                default.change_to_lavanode(pos, node, active_object_count, active_object_count_wider)
-        end,
-})
-
-minetest.register_abm({
-	nodenames = {"group:snappy"},
-        neighbors = {"lavacrafts:lavarock"},
-        interval = 2,
-        chance = 1,
-        action = function(pos, node, active_object_count, active_object_count_wider)
-                default.change_to_lavanode(pos, node, active_object_count, active_object_count_wider)
-        end,
-})
-
-minetest.register_abm({
-	nodenames = {"group:crumbly"},
-        neighbors = {"lavacrafts:lavarock"},
-        interval = 2,
-        chance = 1,
-        action = function(pos, node, active_object_count, active_object_count_wider)
-                default.change_to_lavanode(pos, node, active_object_count, active_object_count_wider)
-        end,
-})
-
-default.change_to_liquid = function(pos)
-	minetest.set_node(pos, {name="default:water_flowing"})
-end
-
-minetest.register_abm({
-	nodenames = {"default:ice"},
-        neighbors = {"group:lava"},
         interval = 1,
         chance = 1,
         action = function(pos, node, active_object_count, active_object_count_wider)
-                default.change_to_liquid(pos, node, active_object_count, active_object_count_wider)
+                default.change_to_lavanode(pos, node, active_object_count, active_object_count_wider)
         end,
 })
