@@ -36,13 +36,13 @@
 -------------------------------------------
 -- Initial digging mode for User Options (1, 2, or 3).
 -- 1 = General purpose, 2 = Advanced trains, 3 = Bike paths.
-local tunnel_mode_default = tonumber(minetest.settings:get("tunnel_digging_mode") or 2)
+local tunnel_mode_default = tonumber(minetest.settings:get("tunnel_digging_mode") or 3)
 
 -- Train tunnels can be lined with a coating.
-local add_lined_tunnels_default = minetest.settings:get_bool("add_lined_tunnels", false)
+local add_lined_tunnels_default = minetest.settings:get_bool("add_lined_tunnels", true)
 
 -- Continuous updown digging, which allows digging up/down multiple times without resetting mode.
-local continuous_updown_default = minetest.settings:get_bool("continuous_updown_digging", false)
+local continuous_updown_default = minetest.settings:get_bool("continuous_updown_digging", true)
 
 -- Enable desert mode - can use different materials when in the desert. Requires Minetest 5.0+.
 -- When desert mode is enabled, user gets additional option to Lock desert mode to current state
@@ -75,8 +75,8 @@ local tunnel_height_general = 4
 local tunnel_height_bike = 5
 
 -- Material for walls and floors (general and train path beyond embankment).
-local tunnel_material = "default:stone"
-local tunnel_material_desert = "default:desert_stone"
+local tunnel_material = "default:obsidian_glass"
+local tunnel_material_desert = "default:obsidian_glass"
 
 -- Material for train track embankment
 local embankment = "default:gravel"
@@ -84,19 +84,19 @@ local embankment = "default:gravel"
 -- Material for reference marks to help laying advtrains track.
 -- This should be a fairly uncommon material with a distinctive look.
 -- If this is changed, old reference marks won't be able to be removed by tunnelmaker tool.
-local reference_marks = "default:meselamp"
+local reference_marks = "moreblocks:clean_glow_glass"
 
 -- Time that reference marks are removed when this command enabled by the user.
 local remove_refs_enable_time = 120
 
 -- Material for bike paths.
-local bike_path_material = "default:cobble"
-local slab_not_desert = "stairs:slab_cobble"
+local bike_path_material = "default:goldblock"
+local slab_not_desert = "moreblocks:slab_goldblock"
 local angled_slab_not_desert = "angledstairs:angled_slab_left_cobble"
 local angled_stair_not_desert = "angledstairs:angled_stair_left_cobble"
 
-local bike_path_material_desert = "default:desert_cobble"
-local slab_desert = "stairs:slab_desert_cobble"
+local bike_path_material_desert = "default:bronzeblock"
+local slab_desert = "moreblocks:slab_goldblock"
 local angled_slab_desert = "angledstairs:angled_slab_left_desert_cobble"
 local angled_stair_desert = "angledstairs:angled_stair_left_desert_cobble"
 
@@ -201,8 +201,8 @@ minetest.register_on_joinplayer(function(player)
 		user_config[pname] = {
 			digging_mode = 3,  -- Bike path mode
 			height = tunnel_height_bike,
-			add_arches = false,
-			add_embankment = false,
+			add_arches = true,
+			add_embankment = true,
 			add_refs = true,
 			add_floors = true,
 			add_wide_floors = add_lined_tunnels_default,
