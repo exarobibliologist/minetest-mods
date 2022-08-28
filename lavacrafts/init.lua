@@ -23,9 +23,9 @@ minetest.register_ore({
 	ore_type       = "scatter",
 	ore            = "lavacrafts:lavarock",
 	wherein        = "group:stone",
-	clust_scarcity = 75*75*75,
+	clust_scarcity = 40*40*40,
 	clust_num_ores = 1,
-	clust_size     = 5,
+	clust_size     = 2,
 	height_min     = 1,
 	height_max     = 1000,
 })
