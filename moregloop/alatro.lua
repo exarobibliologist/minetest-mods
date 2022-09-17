@@ -4,7 +4,7 @@ minetest.register_node("moregloop:small_alatro", {
 	inventory_image = minetest.inventorycube("default_stone.png^moregloop_alatro_shard.png"),
 	tiles = {"default_stone.png^moregloop_alatro_shard.png"},
 	is_ground_content = true,
-	groups = {cracky=1, stone=1, gloop=1},
+	groups = {cracky=1, gloop=1},
 	drop = {
 		max_items = 2,
 		items = {
@@ -21,7 +21,7 @@ minetest.register_node("moregloop:medium_alatro", {
 	inventory_image = minetest.inventorycube("default_stone.png^moregloop_alatro_crystal.png"),
 	tiles = {"default_stone.png^moregloop_alatro_crystal.png"},
 	is_ground_content = true,
-	groups = {cracky=1, stone=1, gloopcrystal=1},
+	groups = {cracky=1, gloopcrystal=1},
 	drop = {
 		max_items = 2,
 		items = {
@@ -38,7 +38,7 @@ minetest.register_node("moregloop:large_alatro", {
 	inventory_image = minetest.inventorycube("default_stone.png^moregloop_alatro_gem.png"),
 	tiles = {"default_stone.png^moregloop_alatro_gem.png"},
 	is_ground_content = true,
-	groups = {cracky=1, stone=1, gloopgem=1},
+	groups = {cracky=1, gloopgem=1},
 	drop = {
 		max_items = 2,
 		items = {

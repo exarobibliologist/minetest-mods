@@ -79,23 +79,23 @@ local tunnel_material = "default:obsidian_glass"
 local tunnel_material_desert = "default:obsidian_glass"
 
 -- Material for train track embankment
-local embankment = "default:gravel"
+local embankment = "default:lava_source"
 
 -- Material for reference marks to help laying advtrains track.
 -- This should be a fairly uncommon material with a distinctive look.
 -- If this is changed, old reference marks won't be able to be removed by tunnelmaker tool.
-local reference_marks = "moreblocks:clean_glow_glass"
+local reference_marks = "default:lava_source" -- default:brick for nice reference marks -- Make this default:lava_source for awesome destruction!
 
 -- Time that reference marks are removed when this command enabled by the user.
 local remove_refs_enable_time = 120
 
 -- Material for bike paths.
-local bike_path_material = "default:goldblock"
+local bike_path_material = "default:lava_source" -- Change this to get nice paths
 local slab_not_desert = "moreblocks:slab_goldblock"
 local angled_slab_not_desert = "angledstairs:angled_slab_left_cobble"
 local angled_stair_not_desert = "angledstairs:angled_stair_left_cobble"
 
-local bike_path_material_desert = "default:bronzeblock"
+local bike_path_material_desert = "default:lava_source"
 local slab_desert = "moreblocks:slab_goldblock"
 local angled_slab_desert = "angledstairs:angled_slab_left_desert_cobble"
 local angled_stair_desert = "angledstairs:angled_stair_left_desert_cobble"
@@ -993,7 +993,7 @@ for i,img in ipairs(images) do
 		inventory_image = img,
 		wield_image = img,
 		stack_max = 1,
-		range = 7.0,
+		range = 25.0,
 
 		-- Dig single node with left mouse click.
 		on_use = function(itemstack, player, pointed_thing)
@@ -1051,6 +1051,16 @@ for i,img in ipairs(images) do
 	}
 	)
 end
+
+minetest.register_craft({
+	output = 'tunnelmaker:tool',
+	recipe = {
+		{'default:steel_ingot', 'default:steel_ingot', 'default:steel_ingot'},
+		{'default:steel_ingot', 'default:steel_ingot', 'default:steel_ingot'},
+		{'default:steel_ingot', 'default:steel_ingot', 'default:steel_ingot'},
+	}
+})
+
 
 -- Register configuration callback
 minetest.register_on_player_receive_fields(function(player, formname, fields)

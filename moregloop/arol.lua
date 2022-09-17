@@ -4,7 +4,7 @@ minetest.register_node("moregloop:small_arol", {
 	inventory_image = minetest.inventorycube("default_stone.png^moregloop_arol_shard.png"),
 	tiles = {"default_stone.png^moregloop_arol_shard.png"},
 	is_ground_content = true,
-	groups = {cracky=1, stone=1, gloop=1},
+	groups = {cracky=1, gloop=1},
 	drop = {
 		max_items = 2,
 		items = {
@@ -21,7 +21,7 @@ minetest.register_node("moregloop:medium_arol", {
 	inventory_image = minetest.inventorycube("default_stone.png^moregloop_arol_crystal.png"),
 	tiles = {"default_stone.png^moregloop_arol_crystal.png"},
 	is_ground_content = true,
-	groups = {cracky=1, stone=1, gloopcrystal=1},
+	groups = {cracky=1, gloopcrystal=1},
 	drop = {
 		max_items = 2,
 		items = {
@@ -38,7 +38,7 @@ minetest.register_node("moregloop:large_arol", {
 	inventory_image = minetest.inventorycube("default_stone.png^moregloop_arol_gem.png"),
 	tiles = {"default_stone.png^moregloop_arol_gem.png"},
 	is_ground_content = true,
-	groups = {cracky=1, stone=1, gloopgem=1},
+	groups = {cracky=1, gloopgem=1},
 	drop = {
 		max_items = 2,
 		items = {

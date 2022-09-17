@@ -23,7 +23,7 @@ minetest.register_ore({
 	ore_type       = "scatter",
 	ore            = "watercrafts:waterrock",
 	wherein        = "default:stone",
-	clust_scarcity = 40*40*40,
+	clust_scarcity = 80*80*80,
 	clust_num_ores = 1,
 	clust_size     = 5,
 	height_min     = -28000,

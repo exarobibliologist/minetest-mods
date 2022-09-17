@@ -19,17 +19,6 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_ore({
-	ore_type       = "scatter",
-	ore            = "lavacrafts:lavarock",
-	wherein        = "group:stone",
-	clust_scarcity = 40*40*40,
-	clust_num_ores = 1,
-	clust_size     = 2,
-	height_min     = 1,
-	height_max     = 1000,
-})
-
 default.change_to_lavanode = function(pos)
 	minetest.set_node(pos, {name="default:lava_source"})
 end

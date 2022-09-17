@@ -3,7 +3,7 @@ minetest.register_node("mario:block", {
 	tiles = {"block1.png"},
 	is_ground_content = true,
 	light_source = 6,
-	groups = {oddly_breakable_by_hand=1, cracky=3, stone=1},
+	groups = {oddly_breakable_by_hand=1, cracky=3, mario=1},
 	drop = {
 		max_items = 3,
 		items = {
@@ -31,7 +31,7 @@ minetest.register_node("mario:exclamationblock", {
 	tiles = {"exclamationblock.png"},
 	is_ground_content = true,
 	light_source = 12,
-	groups = {oddly_breakable_by_hand=1, cracky=3, stone=1},
+	groups = {oddly_breakable_by_hand=1, cracky=3, mario=1},
 	drop = {
 		max_items = 6,
 		items = {
@@ -59,7 +59,7 @@ minetest.register_node("mario:question1", {
 	tiles = {"questionblock1.png"},
 	is_ground_content = true,
 	light_source = 24,
-	groups = {oddly_breakable_by_hand=1, cracky=3, stone=1},
+	groups = {oddly_breakable_by_hand=1, cracky=3, mario=1},
 	drop = {
 		max_items = 12,
 		items = {
@@ -87,7 +87,7 @@ minetest.register_node("mario:question2", {
 	tiles = {"questionblock2.png"},
 	is_ground_content = true,
 	light_source = 48,
-	groups = {oddly_breakable_by_hand=1, cracky=3, stone=1},
+	groups = {oddly_breakable_by_hand=1, cracky=3, mario=1},
 	drop = {
 		max_items = 24,
 		items = {
@@ -122,7 +122,7 @@ minetest.register_node("mario:fireflower", {
 	light_source = LIGHT_MAX ,
 	is_ground_content = true,
 	full_punch_interval = 0.5,
-	groups = {mario=1, oddly_breakable_by_hand=1, cracky=3, stone=1},
+	groups = {mario=1, oddly_breakable_by_hand=1, cracky=3},
 	drop = 'mario:fireflower',
 	legacy_mineral = true,
 })

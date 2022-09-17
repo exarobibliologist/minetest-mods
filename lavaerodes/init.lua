@@ -43,17 +43,17 @@ minetest.register_abm({
 	nodenames = {"default:cobble"},
 	neighbors = {"group:lava"},
 	interval = 5,
-	chance = 2,
+	chance = 1,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		default.change_to_dirt(pos, node, active_object_count, active_object_count_wider)
 	end,
 })
 
 minetest.register_abm({
-	nodenames = {"default:dirt"},
+	nodenames = {"group:dirt"},
 	neighbors = {"group:lava"},
 	interval = 5,
-	chance = 1,
+	chance = 2,
 	action = function(pos, node, active_object_count, active_object_count_wider)
 		default.change_to_air(pos, node, active_object_count, active_object_count_wider)
 	end,

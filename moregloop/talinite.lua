@@ -5,7 +5,7 @@ minetest.register_node("moregloop:small_talinite", {
 	tiles = {"default_stone.png^moregloop_talinite_shard.png"},
 	is_ground_content = true,
 	light_source = 3,
-	groups = {cracky=1, stone=1, gloop=1},
+	groups = {cracky=1, gloop=1},
 	drop = {
 		max_items = 2,
 		items = {
@@ -23,7 +23,7 @@ minetest.register_node("moregloop:medium_talinite", {
 	tiles = {"default_stone.png^moregloop_talinite_crystal.png"},
 	is_ground_content = true,
 	light_source = 5,
-	groups = {cracky=1, stone=1, gloopcrystal=1},
+	groups = {cracky=1, gloopcrystal=1},
 	drop = {
 		max_items = 2,
 		items = {
@@ -41,7 +41,7 @@ minetest.register_node("moregloop:large_talinite", {
 	tiles = {"default_stone.png^moregloop_talinite_gem.png"},
 	is_ground_content = true,
 	light_source = 10,
-	groups = {cracky=1, stone=1, gloopgem=1},
+	groups = {cracky=1, gloopgem=1},
 	drop = {
 		max_items = 2,
 		items = {
